@@ -1,0 +1,12 @@
+{
+  "KeyAttributes": {
+    "PartitionKey": {
+      "AttributeName": "PK",
+      "AttributeType": "S"
+    },
+    "SortKey": {
+      "AttributeName": "SK",
+      "AttributeType": "S"
+    }
+  }
+}

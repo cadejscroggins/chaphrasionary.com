@@ -1,0 +1,10 @@
+#if($ctx.result.items.isEmpty())
+  null
+#else
+  #foreach($room in $ctx.result.items)
+    #if(!$smallestRoom || $room.players.size() < $smallestRoom.players.size())
+      #set($smallestRoom = $room)
+    #end
+  #end
+  $util.toJson($smallestRoom)
+#end

@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "name": "chaphrasionary.com",
+  "scripts": {
+    "bootstrap": "cdk bootstrap",
+    "build": "next build",
+    "deploy:dev": "ENV=dev cdk deploy --outputs-file cdk.outputs.json",
+    "diff:dev": "ENV=dev cdk diff",
+    "clean": "rm -rf node_modules cdk.out .next cdk.outputs.json",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{js,json,graphql,md}\"",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.js\"",
+    "serve": "next start",
+    "start": "next"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.5",
+    "@apollo/react-hooks": "^4.0.0",
+    "@babel/core": "^7.12.10",
+    "@chakra-ui/react": "^1.0.3",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.1.2",
+    "@emotion/styled": "^11.0.0",
+    "a-cdk": "^0.1.45",
+    "a-conf": "^0.1.5",
+    "a-uik": "^0.1.13",
+    "aws-amplify": "^3.3.12",
+    "aws-cdk": "^1.77.0",
+    "aws-sdk": "^2.808.0",
+    "constructs": "^3.2.67",
+    "framer-motion": "^2.9.4",
+    "graphql": "^15.3.0",
+    "next": "^10.0.3",
+    "next-seo": "^4.17.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-feather": "^2.0.9",
+    "react-hook-form": "^6.11.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "prettier": "^2.2.0"
+  }
+}

@@ -1,0 +1,4 @@
+.next/
+cdk.out/
+cdk.outputs.json
+node_modules/

@@ -1,0 +1,11 @@
+#if($ctx.args.username.length() >= 15)
+  $util.error("Username must be fewer than 15 characters long")
+#end
+#if($ctx.args.username.length() < 3)
+  $util.error("Username must be at least 3 characters long")
+#end
+#if(!$util.matches("[A-Za-z0-9]+", $ctx.args.username))
+  $util.error("Username must be alphanumeric")
+#end
+$util.qr($ctx.stash.put("username", $ctx.args.username))
+null

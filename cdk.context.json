@@ -1,0 +1,13 @@
+{
+  "auth": {
+    "allowUnauthenticatedIdentities": true
+  },
+  "namespace": "chaphrasionary",
+  "permissions": {
+    "auth": {
+      "unauthenticated": {
+        "api": ["*"]
+      }
+    }
+  }
+}

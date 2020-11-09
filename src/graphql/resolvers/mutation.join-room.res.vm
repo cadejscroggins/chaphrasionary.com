@@ -1,0 +1,9 @@
+$util.qr($ctx.result.put("players", $ctx.result.players.values()))
+$util.toJson({
+  "createdAt": $util.time.nowISO8601(),
+  "id": $util.autoId(),
+  "playerId": $ctx.identity.cognitoIdentityId,
+  "room": $ctx.result,
+  "roomId": $ctx.result.id,
+  "type": "JOIN_ROOM"
+})

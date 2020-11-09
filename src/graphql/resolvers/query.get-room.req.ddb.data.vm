@@ -1,0 +1,8 @@
+{
+  "key": {
+    "PK": $util.dynamodb.toDynamoDBJson("Room"),
+    "SK": $util.dynamodb.toDynamoDBJson($ctx.args.id)
+  },
+  "operation": "GetItem",
+  "version": "2018-05-29"
+}

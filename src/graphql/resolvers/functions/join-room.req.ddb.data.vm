@@ -1,0 +1,54 @@
+#set($newPlayer = {
+  "id": $ctx.identity.cognitoIdentityId,
+  "lastSeen": $util.time.nowISO8601(),
+  "username": $ctx.stash.username
+})
+#if($ctx.prev.result.id)
+  {
+    "condition": {
+      "expression": "size(players) < #config.#maxPlayers",
+      "expressionNames": {
+        "#config": "config",
+        "#maxPlayers": "maxPlayers"
+      }
+    },
+    "key": {
+      "PK": $util.dynamodb.toDynamoDBJson("Room"),
+      "SK": $util.dynamodb.toDynamoDBJson($ctx.prev.result.id)
+    },
+    "operation": "UpdateItem",
+    "update": {
+      "expression": "SET #players.#playerId = :player, #lastUpdated = :lastUpdated",
+      "expressionNames": {
+        "#lastUpdated": "lastUpdated",
+        "#playerId": "$ctx.identity.cognitoIdentityId",
+        "#players": "players"
+      },
+      "expressionValues": {
+        ":lastUpdated": $util.dynamodb.toDynamoDBJson($util.time.nowISO8601()),
+        ":player": $util.dynamodb.toDynamoDBJson($newPlayer)
+      }
+    },
+    "version": "2018-05-29"
+  }
+#else
+  #set($id = $util.autoId())
+  {
+    "attributeValues": {
+      "config": $util.dynamodb.toDynamoDBJson({
+        "maxPlayers": 8
+      }),
+      "id": $util.dynamodb.toDynamoDBJson($id),
+      "lastUpdated": $util.dynamodb.toDynamoDBJson($util.time.nowISO8601()),
+      "players": $util.dynamodb.toDynamoDBJson({
+        "$ctx.identity.cognitoIdentityId": $newPlayer
+      })
+    },
+    "key": {
+      "PK": $util.dynamodb.toDynamoDBJson("Room"),
+      "SK": $util.dynamodb.toDynamoDBJson($id)
+    },
+    "operation": "PutItem",
+    "version": "2018-05-29"
+  }
+#end

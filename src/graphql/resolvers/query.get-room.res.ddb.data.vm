@@ -1,0 +1,2 @@
+$util.qr($ctx.result.put("players", $ctx.result.players.values()))
+$util.toJson($ctx.result)

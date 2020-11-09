@@ -1,0 +1,48 @@
+enum EventType {
+  JOIN_ROOM
+  START_GAME
+}
+
+type Event {
+  createdAt: AWSDateTime!
+  id: ID!
+  playerId: ID!
+  room: Room!
+  roomId: ID!
+  type: EventType!
+}
+
+type Player {
+  id: ID!
+  lastSeen: AWSDateTime!
+  username: String!
+}
+
+type Room {
+  config: RoomConfig!
+  id: ID!
+  players: [Player]!
+}
+
+type RoomConfig {
+  maxPlayers: Int!
+}
+
+type Mutation {
+  joinRoom(username: String!): Event!
+}
+
+type Query {
+  getRoom(id: ID!): Room!
+}
+
+type Subscription {
+  subscribeRoomEvents(roomId: ID!): Event
+    @aws_subscribe(mutations: ["joinRoom"])
+}
+
+schema {
+  mutation: Mutation
+  query: Query
+  subscription: Subscription
+}

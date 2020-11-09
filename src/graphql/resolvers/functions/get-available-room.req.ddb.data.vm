@@ -1,0 +1,17 @@
+{
+  "filter": {
+    "expression": "size(players) < #config.#maxPlayers",
+    "expressionNames": {
+      "#config": "config",
+      "#maxPlayers": "maxPlayers"
+    }
+  },
+  "operation": "Query",
+  "query": {
+    "expression": "PK = :PK",
+    "expressionValues": {
+      ":PK": $util.dynamodb.toDynamoDBJson("Room")
+    }
+  },
+  "version": "2018-05-29"
+}
