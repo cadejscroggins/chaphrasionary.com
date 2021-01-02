@@ -2,7 +2,7 @@
   "private": true,
   "name": "chaphrasionary.com",
   "scripts": {
-    "bootstrap": "cdk bootstrap",
+    "bootstrap": "ENV=dev cdk bootstrap",
     "build": "next build",
     "deploy:dev": "ENV=dev cdk deploy --outputs-file cdk.outputs.json",
     "diff:dev": "ENV=dev cdk diff",
