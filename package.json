@@ -13,31 +13,31 @@
     "start": "next"
   },
   "dependencies": {
-    "@apollo/client": "^3.3.5",
+    "@apollo/client": "^3.3.6",
     "@apollo/react-hooks": "^4.0.0",
     "@babel/core": "^7.12.10",
-    "@chakra-ui/react": "^1.0.3",
+    "@chakra-ui/react": "^1.1.0",
     "@emotion/core": "^11.0.0",
-    "@emotion/react": "^11.1.2",
+    "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
-    "a-cdk": "^0.1.45",
-    "a-conf": "^0.1.5",
-    "a-uik": "^0.1.13",
-    "aws-amplify": "^3.3.12",
-    "aws-cdk": "^1.77.0",
-    "aws-sdk": "^2.808.0",
-    "constructs": "^3.2.67",
-    "framer-motion": "^2.9.4",
+    "a-cdk": "^0.1.48",
+    "a-conf": "^0.1.12",
+    "a-uik": "^0.1.18",
+    "aws-amplify": "^3.3.13",
+    "aws-cdk": "^1.81.0",
+    "aws-sdk": "^2.820.0",
+    "constructs": "^3.2.90",
+    "framer-motion": "^3.1.1",
     "graphql": "^15.3.0",
-    "next": "^10.0.3",
+    "next": "^10.0.4",
     "next-seo": "^4.17.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-feather": "^2.0.9",
-    "react-hook-form": "^6.11.5"
+    "react-hook-form": "^6.14.0"
   },
   "devDependencies": {
-    "eslint": "^7.15.0",
+    "eslint": "^7.17.0",
     "prettier": "^2.2.0"
   }
 }
