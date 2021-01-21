@@ -5,6 +5,7 @@
     "bootstrap": "ENV=dev cdk bootstrap",
     "build": "next build",
     "deploy:dev": "ENV=dev cdk deploy --outputs-file cdk.outputs.json",
+    "destroy:dev": "ENV=dev cdk destroy",
     "diff:dev": "ENV=dev cdk diff",
     "clean": "rm -rf node_modules cdk.out .next cdk.outputs.json",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{js,json,graphql,md}\"",
@@ -13,31 +14,30 @@
     "start": "next"
   },
   "dependencies": {
-    "@apollo/client": "^3.3.6",
-    "@apollo/react-hooks": "^4.0.0",
+    "@apollo/client": "^3.3.7",
     "@babel/core": "^7.12.10",
-    "@chakra-ui/react": "^1.1.2",
+    "@chakra-ui/react": "^1.1.5",
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
-    "a-cdk": "^0.1.50",
+    "a-cdk": "^0.1.51",
     "a-conf": "^0.1.12",
-    "a-uik": "^0.1.18",
+    "a-uik": "^0.1.21",
     "aws-amplify": "^3.3.14",
-    "aws-cdk": "^1.83.0",
-    "aws-sdk": "^2.824.0",
-    "constructs": "^3.2.98",
-    "framer-motion": "^3.1.4",
+    "aws-cdk": "^1.85.0",
+    "aws-sdk": "^2.829.0",
+    "constructs": "^3.2.109",
+    "framer-motion": "^3.2.1",
     "graphql": "^15.3.0",
     "next": "^10.0.5",
     "next-seo": "^4.17.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-feather": "^2.0.9",
-    "react-hook-form": "^6.14.0"
+    "react-hook-form": "^6.14.2"
   },
   "devDependencies": {
-    "eslint": "^7.17.0",
+    "eslint": "^7.18.0",
     "prettier": "^2.2.0"
   }
 }

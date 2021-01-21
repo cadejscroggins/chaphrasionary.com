@@ -1,4 +1,4 @@
-import { gql } from '@apollo/react-hooks';
+import { gql } from '@apollo/client';
 import ROOM_BASE_FRAGMENT from '../fragments/room-base';
 
 const GET_ROOM = gql`

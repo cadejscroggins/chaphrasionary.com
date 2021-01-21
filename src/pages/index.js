@@ -1,7 +1,7 @@
 import * as C from '@chakra-ui/react';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useMutation } from '@apollo/react-hooks';
+import { useMutation } from '@apollo/client';
 import { useRouter } from 'next/router';
 import GET_ROOM_EVENTS from '../graphql/queries/get-room-events';
 import JOIN_ROOM from '../graphql/mutations/join-room';

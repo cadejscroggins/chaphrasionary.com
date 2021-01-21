@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useQuery } from '@apollo/react-hooks';
+import { useQuery } from '@apollo/client';
 import GET_ROOM from '../graphql/queries/get-room';
 import GET_ROOM_EVENTS from '../graphql/queries/get-room-events';
 import SUBSCRIBE_ROOM_EVENTS from '../graphql/subscriptions/subscribe-room-events';
